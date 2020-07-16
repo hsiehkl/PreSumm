@@ -17,7 +17,7 @@ def run_presumm(input_path, result_path):
         input_path_s = os.path.expanduser(input_path) + '/' + filename
         result_path_s = os.path.expanduser(result_path) + '/' + filename
 
-        command = 'python3 train.py -task ext -mode test_text -test_from ../models/bert_transformer/bertext_cnndm_transformer.pt -text_src {} -result_path {} -visible_gpus -1'.format(input_path_s, result_path_s)
+        command = 'python3 train.py -task ext -mode test_text -test_from ../models/bertext_cnndm_transformer.pt -text_src {} -result_path {} -visible_gpus -1'.format(input_path_s, result_path_s)
 
         output, error = subprocess.Popen([command],
                                         shell=True, universal_newlines=True).communicate()

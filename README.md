@@ -13,11 +13,12 @@ Run the command below with your own paths.
 python run_summary.py RAW_TEXT_PATH RESULT_PATH
 ```
 
-Test with small examples.
+Or test with small examples.
 ```
 python run_summary.py ../raw_data/txt_test ../results/test
 ```
 
+# Orginal README:
 **This code is for EMNLP 2019 paper [Text Summarization with Pretrained Encoders](https://arxiv.org/abs/1908.08345)**
 
 Results on CNN/DailyMail (20/8/2019):

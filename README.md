@@ -1,5 +1,23 @@
 # PreSumm
 
+### Apply Extractive Summarizaiton on Raw Text
+#### Step 1: 
+Download CNN/DM Extractive trained model. [CNN/DM Extractive](https://drive.google.com/open?id=1kKWoV0QCbeIuFt85beQgJ4v0lujaXobJ)
+
+#### step 2: 
+Put the downloaded model into PreSumm/models folder.
+
+#### step 3:
+Run the command below with your own paths.
+```
+python run_summary.py RAW_TEXT_PATH RESULT_PATH
+```
+
+Test with small examples.
+```
+python run_summary.py ../raw_data/txt_test ../results/test
+```
+
 **This code is for EMNLP 2019 paper [Text Summarization with Pretrained Encoders](https://arxiv.org/abs/1908.08345)**
 
 Results on CNN/DailyMail (20/8/2019):
@@ -144,8 +162,6 @@ python train.py  -task abs -mode train -bert_data_path BERT_DATA_PATH -dec_dropo
 python train.py  -task abs -mode train -bert_data_path BERT_DATA_PATH -dec_dropout 0.2  -model_path MODEL_PATH -sep_optim true -lr_bert 0.002 -lr_dec 0.2 -save_checkpoint_steps 2000 -batch_size 140 -train_steps 200000 -report_every 50 -accum_count 5 -use_bert_emb true -use_interval true -warmup_steps_bert 20000 -warmup_steps_dec 10000 -max_pos 512 -visible_gpus 0,1,2,3 -log_file ../logs/abs_bert_cnndm  -load_from_extractive EXT_CKPT   
 ```
 * `EXT_CKPT` is the saved `.pt` checkpoint of the extractive model.
-
-
 
 
 ## Model Evaluation

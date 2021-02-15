@@ -18,7 +18,7 @@ Or test with small examples.
 python run_summary.py ../raw_data/txt_test ../results/test
 ```
 
-# Orginal README:
+# Orginal README
 **This code is for EMNLP 2019 paper [Text Summarization with Pretrained Encoders](https://arxiv.org/abs/1908.08345)**
 
 Results on CNN/DailyMail (20/8/2019):
